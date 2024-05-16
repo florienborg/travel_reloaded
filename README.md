@@ -63,17 +63,20 @@ Breve descripción de como poder ver nuestro proyecto, para ejecutarlo necesitas
 2. Crea la base de datos y la tabla:
 - Abre tu gestor de bases de datos (por ejemplo, phpMyAdmin).
 - Crea una nueva base de datos con el nombre  "happy_travel" aquí las tablas las realizaremos desde tú editor de código.
-3. Abre en tú editor de texto el proyecto y luego dentro de la carpeta laravel en la terminal debes poner
-`composer install`
-y luego, el cuál hará que se carguen las tablas del proyecto
+3. Abre en tu editor de texto el proyecto y luego dentro de la carpeta laravel en la terminal debes poner
+`composer install`. 
+Recuerda tener tu archivo .env con los datos necesarios para poder conectar a la DB, necesitarás una key que generarás: `php artisan key:generate`.
+Completa los datos del .env y luego ejecuta el comando que hará que se carguen las tablas del proyecto
 `php artisan migrate`.
-4. Instalar React Router 6 es ejecutar `npm install react-router-dom@6` en la terminal de tu proyecto y esperar a que se complete la instalación.
+Existen además seeders para completar la tabla de destinos. Luego de migrar la tabla, escribe este comando: `php artisan db:seed --class=DestinationsTableSeeder`. 
+Si las imagenes no cargan al abrir el front, intenta con el comando `php artisan storage:link`.
+4. Para instalar React Router 6 ejecutar `npm install react-router-dom@6` o `npm install` en la terminal de tu proyecto y esperar a que se complete la instalación.
 Si estás usando yarn, emplea este comando: `yarn add react-router-dom@6`<br>
 5.  [Como instalar Bootstrap en el proyecto o con un CDN](https://raiolanetworks.es/blog/bootstrap/#como_descargar_e_instalar_bootstrap). Comando  `npm install bootstrap@5.3.1`
 6. [Como instalar axios](https://www.npmjs.com/package/axios). Comando `npm install axios`
 7. RECUERDA! tienes que tener instalado XAMPP y abrir APACHE y MySQL.
-8. Abrir una terminal acceder a la carpeta `cd server` y luego poner este comando `php artisan server`
-9. Para poder ver el proyecto tienes que acceder a tu terminal en la carpeta de `client` con el comando `cd client` una vez ahí, ejecuta `npm start`
+8. Abrir una terminal y acceder a la carpeta `server` y luego poner este comando `php artisan server`, ir a tuservidor:8000/api para ver los datos
+9. Para poder ver el front tienes que acceder a tu terminal en la carpeta de `client` con el comando `cd client` una vez ahí, ejecuta `npm start`
 
 Y disfruta de la experiencia de ver y guardar destinos.
 

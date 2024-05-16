@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('location');
             $table->string('image');
-            $table->string('description');
+            $table->string('description',350);
             $table->timestamps();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->enum('privacy', ['public', 'private'])->default('public');
